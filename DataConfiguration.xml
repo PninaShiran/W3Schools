@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Environment>
+    <Title>W3Schools Online Web Tutorials</Title>
+    <expectedTopics>
+        <topic>Java HOME</topic>
+        <topic>Java Intro</topic>
+        <topic>Java Get Started</topic>
+        <topic>Java Syntax</topic>
+        <topic>Java Output</topic>
+        <topic>Java Comments</topic>
+        <topic>Java Variables</topic>
+        <topic>Java Data Types</topic>
+        <topic>Java Type Casting</topic>
+        <topic>Java Operators</topic>
+        <topic>Java Strings</topic>
+        <topic>Java Math</topic>
+        <topic>Java Booleans</topic>
+        <topic>Java If...Else</topic>
+        <topic>Java Switch</topic>
+        <topic>Java While Loop</topic>
+        <topic>Java For Loop</topic>
+        <topic>Java Break/Continue</topic>
+        <topic>Java Arrays</topic>
+        <topic>Java Methods</topic>
+        <topic>Java Method Parameters</topic>
+        <topic>Java Method Overloading</topic>
+        <topic>Java Scope</topic>
+        <topic>Java Recursion</topic>
+        <topic>Java OOP</topic>
+        <topic>Java Classes/Objects</topic>
+        <topic>Java Class Attributes</topic>
+        <topic>Java Class Methods</topic>
+        <topic>Java Constructors</topic>
+        <topic>Java Modifiers</topic>
+        <topic>Java Encapsulation</topic>
+        <topic>Java Packages / API</topic>
+        <topic>Java Inheritance</topic>
+        <topic>Java Polymorphism</topic>
+        <topic>Java Inner Classes</topic>
+        <topic>Java Abstraction</topic>
+        <topic>Java Interface</topic>
+        <topic>Java Enums</topic>
+        <topic>Java User Input</topic>
+        <topic>Java Date</topic>
+        <topic>Java ArrayList</topic>
+        <topic>Java LinkedList</topic>
+        <topic>Java HashMap</topic>
+        <topic>Java HashSet</topic>
+        <topic>Java Iterator</topic>
+        <topic>Java Wrapper Classes</topic>
+        <topic>Java Exceptions</topic>
+        <topic>Java RegEx</topic>
+        <topic>Java Threads</topic>
+        <topic>Java Lambda</topic>
+        <topic>Java Files</topic>
+        <topic>Java Create/Write Files</topic>
+        <topic>Java Read Files</topic>
+        <topic>Java Delete Files</topic>
+        <topic>Add Two Numbers</topic>
+        <topic>Count Words</topic>
+        <topic>Reverse a String</topic>
+        <topic>Java Keywords</topic>
+        <topic>Java String Methods</topic>
+        <topic>Java Math Methods</topic>
+        <topic>Java Examples</topic>
+        <topic>Java Compiler</topic>
+        <topic>Java Exercises</topic>
+        <topic>Java Quiz</topic>
+        <topic>Java Certificate</topic>
+    </expectedTopics>
+    <JavaOutput>
+        <topic>Print Text</topic>
+        <topic>Print Numbers</topic>
+    </JavaOutput>
+    <JavaVariables>
+        <topic>Variables</topic>
+        <topic>Print Variables</topic>
+        <topic>Declare Multiple Variables</topic>
+        <topic>Identifiers</topic>
+    </JavaVariables>
+    <nameColumn>
+        <name>Company</name>
+        <name>Contact</name>
+        <name>Country</name>
+    </nameColumn>
+
+</Environment>

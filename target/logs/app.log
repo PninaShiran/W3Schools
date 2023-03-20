@@ -1,0 +1,10 @@
+10:54:41.167 [main] INFO  co.verisoft.fw.extentreport.DelegateExtentTest - Report Log - Log. Status: Info, detils: Test Name: w3SchoolsTest (Report source: OTHER)
+10:54:41.170 [main] INFO  co.verisoft.fw.extentreport.DelegateExtentTest - Report Log - Log. Status: Info, detils: KEY: testId  VALUE: 692ace17-ab9b-46f4-b958-64f432467a75 (Report source: OTHER)
+10:54:45.966 [main] INFO  co.verisoft.fw.extentreport.DelegateExtentTest - Report Log - Pass. Details: Column names not as expected
+10:54:45.998 [main] INFO  co.verisoft.fw.extentreport.DelegateExtentTest - Report Log - Pass. Details: Contact not as expected
+10:54:46.029 [main] INFO  co.verisoft.fw.extentreport.DelegateExtentTest - Report Log - Pass. Details: Contact not as expected
+10:54:46.055 [main] INFO  co.verisoft.fw.extentreport.DelegateExtentTest - Report Log - Pass. Details: Country not as expected
+10:54:46.080 [main] INFO  co.verisoft.fw.extentreport.DelegateExtentTest - Report Log - Pass. Details: Country not as expected
+10:54:46.315 [main] INFO  co.verisoft.fw.extentreport.DelegateExtentTest - Report Log - Get Status. Status: Pass
+10:54:46.315 [main] INFO  co.verisoft.fw.extentreport.DelegateExtentTest - Report Log - Pass. Details: Test Result - PASS
+10:54:46.325 [main] INFO  co.verisoft.fw.extentreport.DelegateExtentReports - Flush report
