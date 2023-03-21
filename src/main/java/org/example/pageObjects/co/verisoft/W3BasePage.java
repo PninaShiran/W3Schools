@@ -18,6 +18,7 @@ public class W3BasePage extends BasePage {
         super(driver);
     }
 
+
     /**
      * Overrides the isOnPage() and checks if the base element appears on the page.
      *
@@ -28,6 +29,7 @@ public class W3BasePage extends BasePage {
         return super.isOnPage((WebElement) getMainTopicLinks());
     }
 
+
     /**
      * Gets the list of main topic links on the page.
      *
@@ -36,6 +38,7 @@ public class W3BasePage extends BasePage {
     public List<WebElement> getMainTopicLinks() {
         return driver.findElements(By.xpath("//div[@id='leftmenuinnerinner']//a"));
     }
+
 
     /**
      * Determines whether the given actual list of main topic links is equal to the expected list of main topic links.
@@ -54,6 +57,7 @@ public class W3BasePage extends BasePage {
         return newMainTopics.equals(actualListTopic);
     }
 
+
     /**
      * Determines whether the given actual list of sub topic links is equal to the expected list of sub topic links.
      *
@@ -67,6 +71,7 @@ public class W3BasePage extends BasePage {
         for (int i = 0; i < actualListSubTopic.size(); i++) {
             newMainTopics.add(actualListSubTopic.get(i).getAttribute("innerHTML"));
         }
+
         return newMainTopics.equals(expectedListSubTopic);
     }
 
