@@ -13,7 +13,6 @@ import java.util.List;
  * This class extends the BasePage class and overrides the isOnPage() method.
  */
 public class HomePage extends BasePage {
-
     @FindBy(id = "search2")
     private WebElement txt_search;
 
