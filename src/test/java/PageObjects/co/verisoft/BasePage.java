@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BasePage extends Base {
+
     public BasePage(WebDriver driver) {
         super(driver);
     }

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HtmlTablePage extends BasePage {
+
     public HtmlTablePage(WebDriver driver) {
         super(driver);
     }

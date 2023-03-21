@@ -20,6 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @ExtentReport
 //@ExtendWith({DriverInjectionExtension.class, SeleniumLogExtesion.class})
 public class W3SchoolTest {
+
     HomePage homePage;
 
     ChromeDriver driver;

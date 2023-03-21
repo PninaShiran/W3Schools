@@ -14,6 +14,7 @@ import java.util.List;
 
 public class UtilFile {
     public static List<String> getListFromXml(String listName) {
+
         List<String> list = new ArrayList<>();
         try {
             File file = new File(System.getProperty("user.dir") + "\\DataConfiguration.xml");

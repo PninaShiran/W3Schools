@@ -10,6 +10,7 @@ import java.util.List;
 
 
 public class HomePage extends Base {
+
     @FindBy(id = "search2")
     private WebElement txt_search;
 

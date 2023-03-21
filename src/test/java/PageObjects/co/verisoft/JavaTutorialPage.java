@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JavaTutorialPage extends BasePage {
+
     public JavaTutorialPage(WebDriver driver) {
         super(driver);
     }
