@@ -36,6 +36,7 @@ public class HomePage extends BasePage {
         return super.isOnPage((WebElement) listSearch);
     }
 
+
     /**
      * Inserts a value into the search input field on the home page.
      *
