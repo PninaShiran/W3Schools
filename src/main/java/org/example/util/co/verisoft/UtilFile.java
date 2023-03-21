@@ -1,4 +1,4 @@
-package Util.co.verisoft;
+package org.example.util.co.verisoft;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -11,8 +11,17 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The UtilFile class provides utility methods for working with files.
+ */
 
 public class UtilFile {
+    /**
+     * Returns a list of strings from an XML file with the specified list name.
+     *
+     * @param listName the name of the list in the XML file
+     * @return a list of strings from the XML file
+     */
     public static List<String> getListFromXml(String listName) {
 
         List<String> list = new ArrayList<>();
@@ -42,6 +51,13 @@ public class UtilFile {
         return list;
     }
 
+
+    /**
+     * Returns the value of the specified node in an XML file.
+     *
+     * @param nodeName the name of the node in the XML file
+     * @return the value of the node in the XML file
+     */
     public static String getData(String nodeName) {
         DocumentBuilder dBuilder;
         Document doc = null;

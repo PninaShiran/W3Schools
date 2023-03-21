@@ -10,5 +10,8 @@
         <module name="W3School" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="W3SchoolsProject" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

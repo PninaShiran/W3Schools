@@ -1,7 +1,10 @@
 package Verifications.co.verisoft;
 
-import PageObjects.co.verisoft.*;
-import Util.co.verisoft.UtilFile;
+import org.example.pageObjects.co.verisoft.HomePage;
+import org.example.pageObjects.co.verisoft.HtmlTablePage;
+import org.example.pageObjects.co.verisoft.JavaTutorialPage;
+import org.example.pageObjects.co.verisoft.W3BasePage;
+import org.example.util.co.verisoft.UtilFile;
 import co.verisoft.fw.extentreport.ExtentReport;
 import co.verisoft.fw.selenium.drivers.factory.DriverCapabilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -27,14 +30,14 @@ public class W3SchoolTest {
 
     JavaTutorialPage javaTutorialPage;
 
-    BasePage basePage;
+    W3BasePage basePage;
 
-    HtmlPage htmlPage;
 
     HtmlTablePage htmlTablePage;
 
     @DriverCapabilities
     DesiredCapabilities capabilities = new DesiredCapabilities();
+
     {
         capabilities.setBrowserName("chrome");
     }
@@ -55,11 +58,10 @@ public class W3SchoolTest {
 
         javaTutorialPage = new JavaTutorialPage(driver);
 
-        htmlPage = new HtmlPage(driver);
 
         htmlTablePage = new HtmlTablePage(driver);
 
-        basePage = new BasePage(driver);
+        basePage = new W3BasePage(driver);
 
         driver.get("https://www.w3schools.com/#gsc.tab=0");
     }
