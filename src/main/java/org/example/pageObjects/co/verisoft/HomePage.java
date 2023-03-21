@@ -24,6 +24,7 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
+
     /**
      * Overrides the isOnPage() method inherited from the BasePage class to determine whether the current page is the home page.
      * This method checks whether the listSearch element appears on the current page
