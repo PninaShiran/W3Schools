@@ -38,7 +38,6 @@ public class W3BasePage extends BasePage {
         return driver.findElements(By.xpath("//div[@id='leftmenuinnerinner']//a"));
     }
 
-
     /**
      * Determines whether the given actual list of main topic links is equal to the expected list of main topic links.
      *
