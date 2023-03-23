@@ -4,6 +4,7 @@ import co.verisoft.fw.pages.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
@@ -14,6 +15,8 @@ import java.util.List;
  */
 public class JavaTutorialPage extends BasePage {
 
+    @FindBy(tagName = "title")
+    private WebElement title;
     public JavaTutorialPage(WebDriver driver) {
         super(driver);
     }
@@ -24,11 +27,11 @@ public class JavaTutorialPage extends BasePage {
      * This method checks whether the table element appears on the current page
      * to determine if the current page is the Java Tutorial page.
      *
-     * @return True if the current page is the Java Tutorial page according to the JavaOutputList element, false otherwise
+     * @return True if the current page is the Java Tutorial page according to the title element, false otherwise
      */
     @Override
     public boolean isOnPage() {
-        return super.isOnPage((WebElement) getJavaOutputList());
+        return super.isOnPage(title);
     }
 
 

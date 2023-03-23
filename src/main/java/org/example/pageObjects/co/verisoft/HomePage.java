@@ -16,6 +16,9 @@ public class HomePage extends BasePage {
     @FindBy(id = "search2")
     private WebElement txt_search;
 
+    @FindBy(tagName = "title")
+    private WebElement title;
+
     @FindBy(xpath = "//div[@id='listofsearchresults']//a")
     private List<WebElement> listSearch;
 
@@ -33,7 +36,7 @@ public class HomePage extends BasePage {
      */
     @Override
     public boolean isOnPage() {
-        return super.isOnPage((WebElement) listSearch);
+        return super.isOnPage(title);
     }
 
 
@@ -52,12 +55,11 @@ public class HomePage extends BasePage {
      *
      * @param keyWord the keyword to search for in the list of search results
      */
-    public void checkListContainValue(String keyWord) {
+    public boolean checkListContainValue(String keyWord) {
         int i;
         for (i = 0; i < this.listSearch.size() && !this.listSearch.get(i).getText().contains(keyWord); i++) ;
-        if (this.listSearch.size() == i)
-            System.out.println("The value Appears at listSearch ");
-        else System.out.println("The value not Appears ");
+        return this.listSearch.size() == i;
+
     }
 
 

@@ -84,5 +84,12 @@
         <name>Contact</name>
         <name>Country</name>
     </nameColumn>
-
+<Contact>
+    <MariaAnders>Maria Anders</MariaAnders>
+    <FranciscoChang>Francisco Chang</FranciscoChang>
+</Contact>
+    <Country>
+       <Germany>Germany</Germany>
+        <Mexico>Mexico</Mexico>
+    </Country>
 </Environment>

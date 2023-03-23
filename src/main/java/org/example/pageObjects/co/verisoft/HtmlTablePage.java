@@ -15,6 +15,9 @@ import java.util.List;
  * This class extends the BasePage class and overrides the isOnPage() method.
  */
 public class HtmlTablePage extends BasePage {
+    @FindBy(tagName = "title")
+    private WebElement title;
+
     @FindBy(id = "customers")
     private WebElement table;
 
@@ -28,11 +31,11 @@ public class HtmlTablePage extends BasePage {
      * This method checks whether the table element appears on the current page
      * to determine if the current page is the table page.
      *
-     * @return True if the current page is the home page according to the table element, false otherwise
+     * @return True if the current page is the home page according to the title element, false otherwise
      */
     @Override
     public boolean isOnPage() {
-        return super.isOnPage(table);
+        return super.isOnPage(title);
     }
 
 

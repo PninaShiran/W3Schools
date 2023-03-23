@@ -1,9 +1,7 @@
 package Verifications.co.verisoft;
 
-import org.example.pageObjects.co.verisoft.HomePage;
-import org.example.pageObjects.co.verisoft.HtmlTablePage;
-import org.example.pageObjects.co.verisoft.JavaTutorialPage;
-import org.example.pageObjects.co.verisoft.W3BasePage;
+import co.verisoft.fw.utils.Asserts;
+import org.example.pageObjects.co.verisoft.*;
 import org.example.util.co.verisoft.UtilFile;
 import co.verisoft.fw.extentreport.ExtentReport;
 import co.verisoft.fw.selenium.drivers.factory.DriverCapabilities;
@@ -14,6 +12,8 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -32,16 +32,11 @@ public class W3SchoolTest {
 
     W3BasePage basePage;
 
+    HtmlPage htmlPage;
+
+    IntroductionJava introductionJava;
 
     HtmlTablePage htmlTablePage;
-
-    @DriverCapabilities
-    DesiredCapabilities capabilities = new DesiredCapabilities();
-
-    {
-        capabilities.setBrowserName("chrome");
-    }
-
 
     @BeforeEach
     public void openBrowser() throws InterruptedException {
@@ -58,8 +53,11 @@ public class W3SchoolTest {
 
         javaTutorialPage = new JavaTutorialPage(driver);
 
+        introductionJava = new IntroductionJava(driver);
 
         htmlTablePage = new HtmlTablePage(driver);
+
+        htmlPage = new HtmlPage(driver);
 
         basePage = new W3BasePage(driver);
 
@@ -69,37 +67,39 @@ public class W3SchoolTest {
 
     @Test
     public void w3SchoolsTest() throws InterruptedException {
-        assertTrue(driver.getTitle().equals("W3Schools Online Web Tutorials"));
+        assertTrue(homePage.isOnPage());
 
         homePage.insertValue("java");
-        homePage.checkListContainValue("java");
-        homePage.clickTopic("JAVA Tutorial");
+        assertTrue(homePage.checkListContainValue("java"), "value not Appears");
+        homePage.clickTopic(UtilFile.getData("JAVA Tutorial"));
 
         assertTrue(basePage.equalMainTopicList(basePage.getMainTopicLinks(), UtilFile.getListFromXml("expectedTopics")), "Main topic not as expected");
 
         assertTrue(basePage.equalSubTopicList(javaTutorialPage.getJavaOutputList(), UtilFile.getListFromXml("JavaOutput")), "SubTopic not as expected");
         assertTrue(basePage.equalSubTopicList(javaTutorialPage.getJavaVariableList(), UtilFile.getListFromXml("JavaVariables")), "SubTopic not as expected");
 
-        assertTrue(driver.getTitle().equals("Java Tutorial"));
+        assertTrue(javaTutorialPage.isOnPage());
         basePage.clickNextButton();
-        assertTrue(driver.getTitle().equals("Introduction to Java"));
+
+        assertTrue(introductionJava.isOnPage());
         basePage.clickPreviousButton();
-        assertTrue(driver.getTitle().equals("Java Tutorial"));
 
+        assertTrue(javaTutorialPage.isOnPage());
 
+        assertTrue(htmlPage.isOnPage());
         basePage.clickTopicLink("HTML");
-        Thread.sleep(20);
-        assertTrue(driver.getTitle().equals("HTML Tutorial"));
+
+        assertTrue(javaTutorialPage.isOnPage());
 
         basePage.clickMainTopicLink("HTML Tables");
 
         assertEquals(htmlTablePage.getColumnNames(), UtilFile.getListFromXml("nameColumn"), "Column names not as expected");
 
-        assertEquals(htmlTablePage.getContactForCompany(0), "Maria Anders", "Contact not as expected");
-        assertEquals(htmlTablePage.getContactForCompany(1), "Francisco Chang", "Contact not as expected");
+        assertEquals(htmlTablePage.getContactForCompany(0), UtilFile.getData("MariaAnders"), "Contact not as expected");
+        assertEquals(htmlTablePage.getContactForCompany(1), UtilFile.getData("FranciscoChang"), "Contact not as expected");
 
-        assertEquals(htmlTablePage.getCountryForCompany(0), "Germany", "Country not as expected");
-        assertEquals(htmlTablePage.getCountryForCompany(1), "Mexico", "Country not as expected");
+        assertEquals(htmlTablePage.getCountryForCompany(0), UtilFile.getData("Germany"), "Country not as expected");
+        assertEquals(htmlTablePage.getCountryForCompany(1), UtilFile.getData("Mexico"), "Country not as expected");
     }
 
 
